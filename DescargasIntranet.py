@@ -8,3 +8,6 @@
 #del estado de la descarga
 #3. Podra comunicarse con la pasarela para saber si hay descargas pendientes o no
 #4. De existir utilizara transmission con el magnet link e iniciara la descarga
+# Protocolo
+# SEND INFODOWNLOAD (<id-download>:<Download-status>)
+# REQUEST INFODOWNLOAD
