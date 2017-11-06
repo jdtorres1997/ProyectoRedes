@@ -1,4 +1,5 @@
 #!/usr/bin/python
+import requests
 
 
 #DescargasIntranet
@@ -11,3 +12,12 @@
 # Protocolo
 # SEND INFODOWNLOAD (<id-download>:<Download-status>)
 # REQUEST INFODOWNLOAD
+
+url = "https://proyectoredestorresvargas.herokuapp.com/consultar/21"
+response = requests.get(url)
+ 
+if response.status_code == 200:
+   results = response.content
+   print results
+else:
+   print "Error code %s" % response.status_code
